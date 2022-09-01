@@ -1,0 +1,24 @@
+name: clima
+description: Simple Flutter Mobile app that implemented in a part of the Complete 2021 Flutter Development Bootcamp with Dart (https://www.udemy.com/course/flutter-bootcamp-with-dart/)
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  geolocator: ^9.0.1
+  http: ^0.13.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

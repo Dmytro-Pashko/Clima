@@ -1,3 +1,4 @@
+import 'package:clima/screen/intro_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screen/loading_screen.dart';
@@ -11,7 +12,9 @@ class ClimaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: LoadingScreen(),
+      home: Scaffold(
+        body: IntroScreen(),
+      ),
     );
   }
 }

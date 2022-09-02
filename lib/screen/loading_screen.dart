@@ -31,8 +31,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void loadWeatherData(Location location) async {
-    var data = await networkService.getWeatherData(
-        location.latitude, location.longitude);
-    print(data);
+    try {
+      var data = await networkService.getWeatherData(
+          location.latitude, location.longitude);
+      // var json = jsonDecode(data,'')
+      print(data);
+    } catch (e) {
+      print(e);
+    }
   }
 }

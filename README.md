@@ -1,16 +1,24 @@
-# clima
+## Clima App
+Clima is a well-designed simple weather app Flutter Mobile app that was implemented in a part of the Complete 2021 Flutter Development Bootcamp with Dart (https://www.udemy.com/course/flutter-bootcamp-with-dart/)
 
-Simple Flutter Mobile app that implemented in a part of the Complete 2021 Flutter Development Bootcamp with Dart (https://www.udemy.com/course/flutter-bootcamp-with-dart/)
+The Clima app can display information about the weather for the current user's location or city.
+The app uses OpenWeatherMap API (https://openweathermap.org/current) in order to obtain weather information.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_1.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_2.png)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_6.png)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_7.png)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_4.png)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/loading.gif)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_3.png)
+
+![Screenshoot1](https://raw.githubusercontent.com/Dmytro-Pashko/Clima/master/git_description/Screenshot_5.png)

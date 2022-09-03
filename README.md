@@ -3,7 +3,8 @@ Clima is a well-designed simple weather app that was implemented in a part of th
 
 The Clima app can display information about the weather for the current user's location or any city.
 The app uses c (https://openweathermap.org/current) in order to obtain weather information.
-App handles different erorrs like missing GPS data, unstable internet connection, failed communication with OpenWeatherMap API.
+
+The Clima app handles different errors like missing GPS data, unstable internet connection, and failed communication with OpenWeatherMap API.
 
 ## App Desing
 Generally, the main focus during the development was aimed at the design of the application.

@@ -1,4 +1,5 @@
 import 'package:clima/screen/location_screen.dart';
+import 'package:clima/screen/weather_info_screen.dart';
 import 'package:clima/services/location_service.dart';
 import 'package:clima/services/network_service.dart';
 import 'package:clima/services/weather_service.dart';
@@ -78,7 +79,7 @@ class WeatherInfoLoadingScreenState extends State<WeatherInfoLoadingScreen> {
     Response? response;
     if (location != null) {
       response = await networkService.getWeatherDataForLocation(
-          location.latitude, location.latitude);
+          location.latitude, location.longitude);
     } else if (city != null) {
       response = await networkService.getWeatherDataForCity(city);
     } else {
@@ -86,12 +87,23 @@ class WeatherInfoLoadingScreenState extends State<WeatherInfoLoadingScreen> {
     }
     if (response != null && response.isSuccess()) {
       WeatherData weatherData = weatherService.getWeatherData(response);
-      // TODO Show Weather Data.
+      print('Received weather data: $weatherData');
+      showWeatherInfo(weatherData);
     } else {
       setState(() {
         showLoadingError();
       });
     }
+  }
+
+  void showWeatherInfo(WeatherData weatherData) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => WeatherInfoScreen(
+          weatherData: weatherData,
+        ),
+      ),
+    );
   }
 
   void showLoadingError() {

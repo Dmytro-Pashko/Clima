@@ -31,3 +31,6 @@ flutter:
     - family: VarelaRound
       fonts:
         - asset: assets/fonts/VarelaRound-Regular.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Bold.ttf

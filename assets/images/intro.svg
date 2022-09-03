@@ -7,36 +7,12 @@
    viewBox="0 0 158.75 158.75"
    version="1.1"
    id="svg1555"
-   sodipodi:docname="intro.svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview146"
-     pagecolor="#0b0c1e"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="1"
-     inkscape:pagecheckerboard="true"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="1.395"
-     inkscape:cx="329.03226"
-     inkscape:cy="259.49821"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
   <defs
      id="defs1552">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient10865">
       <stop
          style="stop-color:#d3d3d3;stop-opacity:1;"
@@ -48,14 +24,11 @@
          id="stop10863" />
     </linearGradient>
     <pattern
-       inkscape:collect="always"
        patternUnits="userSpaceOnUse"
        width="2"
        height="1"
        patternTransform="translate(0,0) scale(10,10)"
-       id="Strips1_1"
-       inkscape:stockid="Stripes 1:1"
-       inkscape:isstock="true">
+       id="Strips1_1">
       <rect
          style="fill:black;stroke:none"
          x="0"
@@ -65,23 +38,20 @@
          id="rect2317" />
     </pattern>
     <linearGradient
-       id="linearGradient10427"
-       inkscape:swatch="solid">
+       id="linearGradient10427">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
          id="stop10425" />
     </linearGradient>
     <linearGradient
-       id="linearGradient10397"
-       inkscape:swatch="solid">
+       id="linearGradient10397">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
          id="stop10395" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient1303">
       <stop
          style="stop-color:#ececec;stop-opacity:0.1984127;"
@@ -93,7 +63,6 @@
          id="stop1301" />
     </linearGradient>
     <radialGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient1303"
        id="radialGradient1305"
        cx="80.607819"
@@ -104,7 +73,6 @@
        gradientTransform="matrix(1.6430988,0,0,1.3170042,-57.632,-2.2297581)"
        gradientUnits="userSpaceOnUse" />
     <meshgradient
-       inkscape:collect="always"
        id="meshgradient10216"
        gradientUnits="userSpaceOnUse"
        x="-236.32376"
@@ -133,7 +101,6 @@
       </meshrow>
     </meshgradient>
     <meshgradient
-       inkscape:collect="always"
        id="meshgradient10765"
        gradientUnits="userSpaceOnUse"
        x="-236.82466"
@@ -162,7 +129,6 @@
       </meshrow>
     </meshgradient>
     <radialGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient10865"
        id="radialGradient10867"
        cx="-135.07788"

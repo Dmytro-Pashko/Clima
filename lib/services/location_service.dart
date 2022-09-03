@@ -1,16 +1,14 @@
 import 'package:geolocator/geolocator.dart';
 
+/// Service that encapsulates all Location related logic.
 class LocationService {
   Future<Location> getCurrentLocation() async {
     checkLocationPermission();
     Position position = await Geolocator.getCurrentPosition();
-    return Location(latitude: position.latitude, longitude: position.longitude);
-  }
-
-  void getLocation() async {
-    checkLocationPermission();
-    Position position = await Geolocator.getCurrentPosition();
-    print(position);
+    Location location =
+        Location(latitude: position.latitude, longitude: position.longitude);
+    print('Obtained current location: $location');
+    return location;
   }
 
   void checkLocationPermission() async {
@@ -44,4 +42,9 @@ class Location {
   double longitude;
 
   Location({required this.latitude, required this.longitude});
+
+  @override
+  String toString() {
+    return 'Location[latitude=$latitude, longitude=$longitude]';
+  }
 }

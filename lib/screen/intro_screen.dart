@@ -47,12 +47,14 @@ class IntroScreen extends StatelessWidget {
             margin: EdgeInsets.all(25),
             child: TextButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => LocationScreen()),
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => LocationScreen(),
+                    ),
                   );
                 },
                 child: Text(
-                  'Get Started',
+                  'GET STARTED',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 15,

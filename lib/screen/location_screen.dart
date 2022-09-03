@@ -1,7 +1,62 @@
+import 'package:clima/screen/loading_screen.dart';
+import 'package:clima/services/location_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
-class LocationScreen extends StatelessWidget {
+class LocationScreen extends StatefulWidget {
+  @override
+  State<LocationScreen> createState() => LocationScreenState();
+}
+
+class LocationScreenState extends State<LocationScreen> {
+  LocationService locationService = LocationService();
+
+  void getCurrentLocation() async {
+    Location currentLocation;
+    try {
+      currentLocation = await locationService.getCurrentLocation();
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => WeatherInfoLoadingScreen(
+            location: currentLocation,
+          ),
+        ),
+      );
+    } catch (e) {
+      showLocationFailedDialog();
+    }
+  }
+
+  void showLocationFailedDialog() {
+    // Alert dialog using custom alert style
+    Alert(
+      context: context,
+      style: AlertStyle(
+          isCloseButton: false,
+          descStyle: TextStyle(
+              color: Colors.white, fontFamily: 'VarelaRound', fontSize: 15)),
+      type: AlertType.warning,
+      desc:
+          "Clima app cannot obtain your current location. Please enter your city manually or check your location option in settings and try again.",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "OK",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'VarelaRound',
+                fontWeight: FontWeight.bold),
+          ),
+          onPressed: () => Navigator.pop(context),
+          color: Color(0xFF0095FF),
+          radius: BorderRadius.circular(12.0),
+        ),
+      ],
+    ).show();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,7 +98,9 @@ class LocationScreen extends StatelessWidget {
                   margin:
                       EdgeInsets.only(left: 50, right: 50, top: 40, bottom: 20),
                   child: TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      getCurrentLocation();
+                    },
                     label: Text(
                       'USE CURRENT LOCATION',
                       style: TextStyle(
@@ -79,6 +136,15 @@ class LocationScreen extends StatelessWidget {
                   margin:
                       EdgeInsets.only(left: 50, right: 50, top: 20, bottom: 20),
                   child: TextField(
+                    onSubmitted: (value) {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => WeatherInfoLoadingScreen(
+                            city: value,
+                          ),
+                        ),
+                      );
+                    },
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       labelText: 'Enter your city name',

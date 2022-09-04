@@ -31,12 +31,17 @@ class LocationScreenState extends State<LocationScreen> {
   void showLocationFailedDialog() {
     // Alert dialog using custom alert style
     Alert(
+      image: SvgPicture.asset(
+        'assets/images/no_location_alert_icon.svg',
+        color: Colors.amber[800],
+        height: 75,
+        width: 75,
+      ),
       context: context,
       style: AlertStyle(
           isCloseButton: false,
           descStyle: TextStyle(
               color: Colors.white, fontFamily: 'VarelaRound', fontSize: 15)),
-      type: AlertType.warning,
       desc:
           "Clima app cannot obtain your current location. Please enter your city manually or check your location option in settings and try again.",
       buttons: [

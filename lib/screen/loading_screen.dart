@@ -5,6 +5,7 @@ import 'package:clima/services/network_service.dart';
 import 'package:clima/services/weather_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class WeatherInfoLoadingScreen extends StatefulWidget {
@@ -109,11 +110,16 @@ class WeatherInfoLoadingScreenState extends State<WeatherInfoLoadingScreen> {
   void showLoadingError() {
     Alert(
       context: context,
+      image: SvgPicture.asset(
+        'assets/images/alert_no_connection.svg',
+        color: Colors.amber[800],
+        height: 75,
+        width: 75,
+      ),
       style: AlertStyle(
           isCloseButton: false,
           descStyle: TextStyle(
               color: Colors.white, fontFamily: 'VarelaRound', fontSize: 15)),
-      type: AlertType.warning,
       desc:
           "Clima app cannot obtain weather data for your city, please check your internet connection and try again.",
       buttons: [
